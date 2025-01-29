@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+//Written by Quinn
+//This uses Unity Events
 public class Player2Controller : MonoBehaviour
 {
     private Rigidbody2D playerRigidbody;
@@ -17,21 +18,6 @@ public class Player2Controller : MonoBehaviour
         PlayerControls playerControls = new PlayerControls();
         
         playerControls.Player2.Enable();
-        
-        playerControls.Player2.Move2.performed += Move2_performed;
-        playerControls.Player2.Move2.canceled += Move2_canceled;
-    }
-
-    private void Move2_canceled(InputAction.CallbackContext obj)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    private void Move2_performed(InputAction.CallbackContext context)
-    {
-        //Move code
-        Vector2 inputVector = context.ReadValue<Vector2>();
-        playerRigidbody.AddForce(new Vector2(inputVector.x, inputVector.y) * speed);
     }
 
     public void MOVE(InputAction.CallbackContext context)
@@ -40,8 +26,17 @@ public class Player2Controller : MonoBehaviour
 
         if (context.performed != false)
         {
-            //Movement code goes here
-            //playerRigidbody.AddForce();
+            //Movement code
+            //This may need to be changed out of the rigidbody and into transform. 
+            Vector2 inputVector = context.ReadValue<Vector2>();
+            playerRigidbody.AddForce(new Vector2(inputVector.x, inputVector.y) * speed);
+        }
+
+        //If the button press was canceled
+        if (context.canceled != false)
+        {
+
         }
     }
 }
+

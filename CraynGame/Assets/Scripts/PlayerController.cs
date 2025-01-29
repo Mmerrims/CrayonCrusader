@@ -1,3 +1,5 @@
+//Written by Quinn
+//This uses Unity Events
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,32 +18,30 @@ public class PlayerController : MonoBehaviour
 
         PlayerControls playerControls = new PlayerControls();
         playerControls.Player1.Enable();
-       
-        playerControls.Player1.Move1.performed += Move1_performed;
-        playerControls.Player1.Move1.canceled += Move1_canceled;
-      
-    }
-
-    private void Move1_canceled(InputAction.CallbackContext obj)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    private void Move1_performed(InputAction.CallbackContext context)
-    {
-        //Move code
-        Vector2 inputVector= context.ReadValue<Vector2>();
-        playerRigidbody.AddForce(new Vector2(inputVector.x, inputVector.y) * speed);
     }
 
     public void MOVE(InputAction.CallbackContext context)
     {
         Debug.Log("Move buttom was pressed" + context.phase);
-        
+        //If the button was pressed
         if(context.performed != false)
         {
-            //Movement code goes here
-            //playerRigidbody.AddForce();
+            //Movement Code. May need to be moved out of rigidbody and into transform
+            Vector2 inputVector = context.ReadValue<Vector2>();
+            playerRigidbody.AddForce(new Vector2(inputVector.x, inputVector.y) * speed);
         }
+
+        //If the button press was canceled
+        if(context.canceled != false)
+        {
+
+        }
+    }
+
+    private void OnDestroy()
+    {
+        //These are vestigal. 
+        //playerControls.Player1.Move1.performed -= Move1_performed;
+        //playerControls.Player1.Move1.canceled -= Move1_canceled;
     }
 }
