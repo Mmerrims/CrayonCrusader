@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         //If the button press was canceled
         if(context.canceled != false)
         {
+            playerRigidbody.AddForce(new Vector2(0,0) * speed);
 
         }
     }
