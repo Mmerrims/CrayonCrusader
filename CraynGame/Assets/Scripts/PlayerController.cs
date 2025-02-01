@@ -7,13 +7,13 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D playerRigidbody;
-    private PlayerInput playerInput;
-    public float speed;
+    [SerializeField] private Rigidbody2D playerRigidbody;
+    [SerializeField] private PlayerInput playerInput;
+    [SerializeField] private float speed;
+
 
     private void Awake()
     {
-        playerRigidbody = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
 
         PlayerControls playerControls = new PlayerControls();
