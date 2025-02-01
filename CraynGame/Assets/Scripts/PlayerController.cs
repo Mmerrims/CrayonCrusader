@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private float speed;
 
-
+    
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
         playerControls.Player1.Enable();
     }
 
+    //This moves the player. It is invoked by Unity Event
     public void MOVE(InputAction.CallbackContext context)
     {
         Debug.Log("Move buttom was pressed" + context.phase);
@@ -41,8 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDestroy()
     {
-        //These are vestigal. 
-        //playerControls.Player1.Move1.performed -= Move1_performed;
-        //playerControls.Player1.Move1.canceled -= Move1_canceled;
+        //Currently empty. Just keeping this here so I don't forget when we 
+        //eventually need to add stuff here. 
     }
 }
