@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject BlueController;
     [SerializeField] private GameObject YellowController;
     private bool playersCanMove;
-    [SerializeField] private GameObject WinScreen;
+    private string winningTeam;
+    [SerializeField] private GameObject BlueWinscreen;
+    [SerializeField] private GameObject YellowWinScreen;
+
+    [SerializeField] private GameObject EndScreen;
+
 
 
 
@@ -37,6 +42,17 @@ public class GameManager : MonoBehaviour
                 BlueController.SetActive(false);
                 YellowController.SetActive(false);
 
+                EndScreen.SetActive(true);
+
+                if (winningTeam == "Blue")
+                {
+                    BlueWinscreen.SetActive(true);
+                }
+                else if (winningTeam == "Yellow")
+                {
+                    YellowWinScreen.SetActive(true);
+                }
+
                 break;
 
             default: 
@@ -44,10 +60,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetStateEnded()
+    public void SetStateEnded(string teamThatWon)
     {
         gameState = "Ended";
+        winningTeam = teamThatWon;
+        Debug.Log(winningTeam + " has won!!");
         Statemanager();
     }
+
 
 }
