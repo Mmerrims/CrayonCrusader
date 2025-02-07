@@ -35,6 +35,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Slice"",
+                    ""type"": ""Button"",
+                    ""id"": ""6c599a42-33b1-4430-ae7c-9302904e72fe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -92,6 +101,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Move1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed2f9078-ab0d-45a5-83ba-3f83935b8cfe"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Slice"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -107,6 +127,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Slice"",
+                    ""type"": ""Button"",
+                    ""id"": ""da1caab7-26bc-4169-b4a4-5685f43d0283"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -164,6 +193,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Move2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f284ef06-3d98-42cb-b577-4a8c1dd29632"",
+                    ""path"": ""<Keyboard>/rightShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Slice"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -221,9 +261,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // Player1
         m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
         m_Player1_Move1 = m_Player1.FindAction("Move1", throwIfNotFound: true);
+        m_Player1_Slice = m_Player1.FindAction("Slice", throwIfNotFound: true);
         // Player2
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_Move2 = m_Player2.FindAction("Move2", throwIfNotFound: true);
+        m_Player2_Slice = m_Player2.FindAction("Slice", throwIfNotFound: true);
         // Debug
         m_Debug = asset.FindActionMap("Debug", throwIfNotFound: true);
         m_Debug_Restart = m_Debug.FindAction("Restart", throwIfNotFound: true);
@@ -290,11 +332,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player1;
     private List<IPlayer1Actions> m_Player1ActionsCallbackInterfaces = new List<IPlayer1Actions>();
     private readonly InputAction m_Player1_Move1;
+    private readonly InputAction m_Player1_Slice;
     public struct Player1Actions
     {
         private @PlayerControls m_Wrapper;
         public Player1Actions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move1 => m_Wrapper.m_Player1_Move1;
+        public InputAction @Slice => m_Wrapper.m_Player1_Slice;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -307,6 +351,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move1.started += instance.OnMove1;
             @Move1.performed += instance.OnMove1;
             @Move1.canceled += instance.OnMove1;
+            @Slice.started += instance.OnSlice;
+            @Slice.performed += instance.OnSlice;
+            @Slice.canceled += instance.OnSlice;
         }
 
         private void UnregisterCallbacks(IPlayer1Actions instance)
@@ -314,6 +361,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move1.started -= instance.OnMove1;
             @Move1.performed -= instance.OnMove1;
             @Move1.canceled -= instance.OnMove1;
+            @Slice.started -= instance.OnSlice;
+            @Slice.performed -= instance.OnSlice;
+            @Slice.canceled -= instance.OnSlice;
         }
 
         public void RemoveCallbacks(IPlayer1Actions instance)
@@ -336,11 +386,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player2;
     private List<IPlayer2Actions> m_Player2ActionsCallbackInterfaces = new List<IPlayer2Actions>();
     private readonly InputAction m_Player2_Move2;
+    private readonly InputAction m_Player2_Slice;
     public struct Player2Actions
     {
         private @PlayerControls m_Wrapper;
         public Player2Actions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move2 => m_Wrapper.m_Player2_Move2;
+        public InputAction @Slice => m_Wrapper.m_Player2_Slice;
         public InputActionMap Get() { return m_Wrapper.m_Player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -353,6 +405,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move2.started += instance.OnMove2;
             @Move2.performed += instance.OnMove2;
             @Move2.canceled += instance.OnMove2;
+            @Slice.started += instance.OnSlice;
+            @Slice.performed += instance.OnSlice;
+            @Slice.canceled += instance.OnSlice;
         }
 
         private void UnregisterCallbacks(IPlayer2Actions instance)
@@ -360,6 +415,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move2.started -= instance.OnMove2;
             @Move2.performed -= instance.OnMove2;
             @Move2.canceled -= instance.OnMove2;
+            @Slice.started -= instance.OnSlice;
+            @Slice.performed -= instance.OnSlice;
+            @Slice.canceled -= instance.OnSlice;
         }
 
         public void RemoveCallbacks(IPlayer2Actions instance)
@@ -434,10 +492,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IPlayer1Actions
     {
         void OnMove1(InputAction.CallbackContext context);
+        void OnSlice(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
         void OnMove2(InputAction.CallbackContext context);
+        void OnSlice(InputAction.CallbackContext context);
     }
     public interface IDebugActions
     {

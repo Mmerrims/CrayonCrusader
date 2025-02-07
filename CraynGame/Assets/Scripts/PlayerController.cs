@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.UI.Image;
 
 public class PlayerController : MonoBehaviour
 {
@@ -39,6 +40,12 @@ public class PlayerController : MonoBehaviour
             playerRigidbody.AddForce(new Vector2(0, 0) * speed);
 
         }
+    }
+    public void Slice(InputAction.CallbackContext context)
+    {
+       Ray ray = new Ray(playerRigidbody.position, transform.forward);
+        Debug.DrawRay(playerRigidbody.position, transform.forward);
+        Debug.Log("Sliced");
     }
 
 

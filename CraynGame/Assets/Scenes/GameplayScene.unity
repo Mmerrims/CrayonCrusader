@@ -530,6 +530,26 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: aa6930c0-1586-4c31-a757-c163d787f401
     m_ActionName: Debug/Quit[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6c599a42-33b1-4430-ae7c-9302904e72fe
+    m_ActionName: Player1/Slice[/Keyboard/b]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 799452526}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Slice
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: da1caab7-26bc-4169-b4a4-5685f43d0283
+    m_ActionName: Player2/Slice[/Keyboard/rightShift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
@@ -1916,6 +1936,26 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: aa6930c0-1586-4c31-a757-c163d787f401
     m_ActionName: Debug/Quit[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1627425275}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Slice
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6c599a42-33b1-4430-ae7c-9302904e72fe
+    m_ActionName: Player1/Slice[/Keyboard/b]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: da1caab7-26bc-4169-b4a4-5685f43d0283
+    m_ActionName: Player2/Slice[/Keyboard/rightCtrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player1
