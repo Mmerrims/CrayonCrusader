@@ -43,9 +43,12 @@ public class PlayerController : MonoBehaviour
     }
     public void Slice(InputAction.CallbackContext context)
     {
-       Ray ray = new Ray(playerRigidbody.position, transform.forward);
-        Debug.DrawRay(playerRigidbody.position, transform.forward);
-        Debug.Log("Sliced");
+        /*Ray ray = new Ray(playerRigidbody.position, transform.forward);
+         Debug.DrawRay(playerRigidbody.position, transform.forward);
+         Debug.Log("Sliced");*/
+
+        RaycastHit2D slice = Physics2D.Raycast(playerRigidbody.transform.position, Vector2.up);
+        Debug.DrawLine(playerRigidbody.transform.position, Vector2.up, Color.red);
     }
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject victoryTrigger;
     [SerializeField] private string team;
