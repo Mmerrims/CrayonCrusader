@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private string team;
     [SerializeField] private Rigidbody2D playerRigidbody;
     [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 3.5f;
 
     private GameManager gameManager;
 
@@ -31,13 +31,13 @@ public class PlayerController : MonoBehaviour
         {
             //Movement Code. May need to be moved out of rigidbody and into transform
             Vector2 inputVector = context.ReadValue<Vector2>();
-            playerRigidbody.AddForce(new Vector2(inputVector.x, inputVector.y) * speed);
+            playerRigidbody.velocity = new Vector2(inputVector.x, inputVector.y) * speed;
         }
 
         //If the button press was canceled
         if (context.canceled != false)
         {
-            playerRigidbody.AddForce(new Vector2(0, 0) * speed);
+            playerRigidbody.velocity = new Vector2(0, 0) * speed;
 
         }
     }
