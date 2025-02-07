@@ -1,18 +1,53 @@
+//Written by Quinn
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private string gameState;
+    [SerializeField] private GameObject BlueController;
+    [SerializeField] private GameObject YellowController;
+    private bool playersCanMove;
+    [SerializeField] private GameObject WinScreen;
+
+
+
+    private void Statemanager()
     {
-        
+        switch (gameState)
+        {
+            case "NotStarted":
+                Debug.Log("Game is not started");
+                break;
+
+            case "Running":
+                Debug.Log("Game has started running");
+                playersCanMove = true;
+
+                BlueController.SetActive(true);
+                YellowController.SetActive(true);
+                break;
+
+            case "Ended":
+                Debug.Log("Game has Ended");
+                
+                playersCanMove = false;
+                BlueController.SetActive(false);
+                YellowController.SetActive(false);
+
+                break;
+
+            default: 
+                break;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetStateEnded()
     {
-        
+        gameState = "Ended";
+        Statemanager();
     }
+
 }
