@@ -968,10 +968,9 @@ MonoBehaviour:
   gameState: 
   BlueController: {fileID: 799452522}
   YellowController: {fileID: 1627425273}
-  BlueWinscreen: {fileID: 0}
-  YellowWinScreen: {fileID: 0}
-  BlueWin: {fileID: 0}
-  YellowWin: {fileID: 0}
+  BlueWinscreen: {fileID: 1652391039}
+  YellowWinScreen: {fileID: 1167469722}
+  EndScreen: {fileID: 1558217933}
 --- !u!1 &1217996346
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,7 +1785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1558217934
 RectTransform:
   m_ObjectHideFlags: 0
