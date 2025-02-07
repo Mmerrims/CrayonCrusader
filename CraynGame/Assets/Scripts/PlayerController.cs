@@ -45,4 +45,9 @@ public class PlayerController : MonoBehaviour
         //Currently empty. Just keeping this here so I don't forget when we 
         //eventually need to add stuff here. 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
 }

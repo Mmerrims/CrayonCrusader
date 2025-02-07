@@ -14,6 +14,6 @@ public class UIManager : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
-        print("Game's Closed");
+        Debug.Log("Quit the Game");
     }
 }
