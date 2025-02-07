@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.CompareTag(victoryTrigger.tag) != false)
         {
             Debug.Log(team + "has won the race!");
-            gameManager.SetStateEnded();
+            gameManager.SetStateEnded(team);
         }
     }
 }
