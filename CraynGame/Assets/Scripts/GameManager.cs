@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -42,15 +43,15 @@ public class GameManager : MonoBehaviour
                 BlueController.SetActive(false);
                 YellowController.SetActive(false);
 
-                EndScreen.SetActive(true);
+                //EndScreen.SetActive(true);
 
                 if (winningTeam == "Blue")
                 {
-                    BlueWinscreen.SetActive(true);
+                    SceneManager.LoadScene("BlueWinScreen");
                 }
                 else if (winningTeam == "Yellow")
                 {
-                    YellowWinScreen.SetActive(true);
+                    SceneManager.LoadScene("YellowWinScreen");
                 }
 
                 break;
