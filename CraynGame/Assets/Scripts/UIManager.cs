@@ -16,4 +16,9 @@ public class UIManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit the Game");
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
 }
