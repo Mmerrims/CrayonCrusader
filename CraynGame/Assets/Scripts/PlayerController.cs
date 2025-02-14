@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private float speed = 3.5f;
     [SerializeField] public bool isMoving;
+    [SerializeField] private GameObject attackZone;
+    private float dirX;
+    private float dirY;
+    [SerializeField] private float attackDuration;
 
     private GameManager gameManager;
 
@@ -34,6 +38,11 @@ public class PlayerController : MonoBehaviour
             Vector2 inputVector = context.ReadValue<Vector2>();
             playerRigidbody.velocity = new Vector2(inputVector.x, inputVector.y) * speed;
             isMoving = true;
+
+            //Moves the attack zone
+            attackZone.transform.position = new Vector3(playerRigidbody.transform.position.x + ((1.25f * inputVector.x) / 2), playerRigidbody.transform.position.y + ((1.25f * inputVector.y) / 2), 0f);
+
+
         }
 
         //If the button press was canceled
@@ -46,12 +55,20 @@ public class PlayerController : MonoBehaviour
     }
     public void Slice(InputAction.CallbackContext context)
     {
-        /*Ray ray = new Ray(playerRigidbody.position, transform.forward);
-         Debug.DrawRay(playerRigidbody.position, transform.forward);
-         Debug.Log("Sliced");*/
+        if(context.performed != true) 
+        {
+            Debug.Log("Slice Occured");
+            attackZone.SetActive(true);
+            StartCoroutine(attack());
+        }
+    }
 
-        RaycastHit2D slice = Physics2D.Raycast(playerRigidbody.transform.position, Vector2.up);
-        Debug.DrawLine(playerRigidbody.transform.position, Vector2.up, Color.red);
+    private IEnumerator attack()
+    {
+        Debug.Log("CoROutine started");
+        yield return new WaitForSeconds(attackDuration);
+        Debug.Log("Attack duration ended");
+        attackZone.SetActive(false);
     }
 
 

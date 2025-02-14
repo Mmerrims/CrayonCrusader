@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BlueVP
   - YellowVP
+  - Lever
   layers:
   - Default
   - TransparentFX
