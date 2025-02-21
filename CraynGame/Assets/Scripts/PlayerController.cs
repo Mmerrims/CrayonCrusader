@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float attackDuration;
 
     [SerializeField] private GameObject runningClip;
+    [SerializeField] private AudioClip swingSound;
 
     private GameManager gameManager;
 
@@ -58,7 +59,8 @@ public class PlayerController : MonoBehaviour
     }
     public void Slice(InputAction.CallbackContext context)
     {
-        if(context.performed != true) 
+        //AudioSource.PlayClipAtPoint(swingSound, playerRigidbody.transform.position);
+        if (context.performed != true) 
         {
             Debug.Log("Slice Occured");
             attackZone.SetActive(true);
