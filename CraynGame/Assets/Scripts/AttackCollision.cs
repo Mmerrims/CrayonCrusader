@@ -10,13 +10,15 @@ public class AttackCollision : MonoBehaviour
     {
         if(collision.CompareTag("Lever") != false)
         {
-            Debug.Log("Lever has been hit");
+            //Debug.Log("Lever has been hit");
             hitObject = collision.gameObject;
 
             hitObject.GetComponent<Lever>().GetOpenClose();
         }
-        else if (collision.CompareTag("Player"))
+
+        if (collision.CompareTag("Player") != false)
         {
+            Debug.Log("Statebhaw bi");
             hitObject = collision.gameObject;
             hitObject.GetComponent<PlayerCollision>().PlayerControllerHit();
         }

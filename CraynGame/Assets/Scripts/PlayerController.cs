@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     //This moves the player. It is invoked by Unity Events
     public void MOVE(InputAction.CallbackContext context)
     {
-        Debug.Log("Move button was pressed" + context.phase);
+        //Debug.Log("Move button was pressed" + context.phase);
         //If the button was pressed
         if (context.performed != false)
         {
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         //AudioSource.PlayClipAtPoint(swingSound, playerRigidbody.transform.position);
         if (context.performed != true) 
         {
-            Debug.Log("Slice Occured");
+            //Debug.Log("Slice Occured");
             attackZone.SetActive(true);
             StartCoroutine(attack());
         }
@@ -71,9 +71,9 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator attack()
     {
-        Debug.Log("CoROutine started");
+       // Debug.Log("CoROutine started");
         yield return new WaitForSeconds(attackDuration);
-        Debug.Log("Attack duration ended");
+        //Debug.Log("Attack duration ended");
         attackZone.SetActive(false);
     }
 
@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator hitCooldown()
     {
+        Debug.Log("HitCooldown");
         playerInput.enabled = false;
         yield return new WaitForSeconds(stunDuration);
         playerInput.enabled = true;
