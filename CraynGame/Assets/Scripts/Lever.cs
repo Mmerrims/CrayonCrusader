@@ -19,15 +19,22 @@ public class Lever : MonoBehaviour
 
     private void OpenClose()
     {
+        Debug.Log("OpenClose");
         if (door1.activeInHierarchy != true)
         {
-            door1.SetActive(false);
-            door2.SetActive(true);
+            Debug.Log("Door opened");
+            door1.SetActive(true);
+            door2.SetActive(false);
         }
         else if (door2.activeInHierarchy != true)
         {
-            door1.SetActive(true);
-            door2.SetActive(false);
+            Debug.Log("Door CLosed");
+            door1.SetActive(false);
+            door2.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("SOmething whent wrong");
         }
     }
 }
