@@ -20,4 +20,9 @@ public class PlayerCollision : MonoBehaviour
             gameManager.SetStateEnded(team);
         }
     }
+
+    public void PlayerControllerHit()
+    {
+        playerController.GetIsHit();
+    }
 }

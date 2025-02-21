@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private float dirX;
     private float dirY;
     [SerializeField] private float attackDuration;
+    [SerializeField] private float stunDuration;
 
     [SerializeField] private GameObject runningClip;
 
@@ -91,5 +92,24 @@ public class PlayerController : MonoBehaviour
         {
             runningClip.SetActive(false);
         }
+    }
+
+    public void GetIsHit()
+    {
+        IsHit();
+    }
+
+    private void IsHit()
+    {
+
+        StartCoroutine(hitCooldown());
+    }
+
+    private IEnumerator hitCooldown()
+    {
+        playerInput.enabled = false;
+        yield return new WaitForSeconds(stunDuration);
+        playerInput.enabled = true;
+
     }
 }

@@ -15,5 +15,11 @@ public class AttackCollision : MonoBehaviour
 
             hitObject.GetComponent<Lever>().GetOpenClose();
         }
+        else if (collision.CompareTag("Player"))
+        {
+            hitObject = collision.gameObject;
+            hitObject.GetComponent<PlayerCollision>().PlayerControllerHit();
+        }
+
     }
 }
