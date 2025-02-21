@@ -7627,6 +7627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door1: {fileID: 2027480801}
   door2: {fileID: 559404467}
+  doorOpen: {fileID: 8300000, guid: 13a1471ef93ae6840bd98518a7622f46, type: 3}
 --- !u!1 &1748757262
 GameObject:
   m_ObjectHideFlags: 0
