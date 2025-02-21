@@ -1,6 +1,7 @@
 //Written by Quinn
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private float dirX;
     private float dirY;
     [SerializeField] private float attackDuration;
+
+    [SerializeField] private GameObject runningClip;
 
     private GameManager gameManager;
 
@@ -78,4 +81,15 @@ public class PlayerController : MonoBehaviour
         //eventually need to add stuff here. 
     }
 
+    void Update()
+    {
+        if (isMoving == true)
+        {
+            runningClip.SetActive(true);
+        }
+        else
+        {
+            runningClip.SetActive(false);
+        }
+    }
 }
