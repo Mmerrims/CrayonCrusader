@@ -3965,6 +3965,7 @@ MonoBehaviour:
   isMoving: 0
   attackZone: {fileID: 620237054}
   attackDuration: 3
+  stunDuration: 5
   runningClip: {fileID: 2140326254}
   swingSound: {fileID: 8300000, guid: 1a4fdad0cf5e7ea48aece77133a00335, type: 3}
 --- !u!1 &846325401
@@ -7166,6 +7167,7 @@ MonoBehaviour:
   isMoving: 0
   attackZone: {fileID: 969292521}
   attackDuration: 3
+  stunDuration: 5
   runningClip: {fileID: 348715342}
   swingSound: {fileID: 8300000, guid: 31547f2fec3b3a64f83c9f1397034291, type: 3}
 --- !u!4 &1627425276

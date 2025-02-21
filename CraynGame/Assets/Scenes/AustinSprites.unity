@@ -3572,6 +3572,10 @@ MonoBehaviour:
   playerInput: {fileID: 799452525}
   speed: 10
   isMoving: 0
+  attackZone: {fileID: 0}
+  attackDuration: 0
+  stunDuration: 5
+  runningClip: {fileID: 0}
 --- !u!1 &846325401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,7 +3721,7 @@ GameObject:
   - component: {fileID: 853172889}
   m_Layer: 0
   m_Name: BluePlayer2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6772,6 +6776,10 @@ MonoBehaviour:
   playerInput: {fileID: 1627425274}
   speed: 10
   isMoving: 0
+  attackZone: {fileID: 0}
+  attackDuration: 0
+  stunDuration: 5
+  runningClip: {fileID: 0}
 --- !u!4 &1627425276
 Transform:
   m_ObjectHideFlags: 0
@@ -8821,7 +8829,7 @@ GameObject:
   - component: {fileID: 2093417371}
   m_Layer: 0
   m_Name: YellowPlayer1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
