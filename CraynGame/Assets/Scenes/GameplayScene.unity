@@ -3968,6 +3968,7 @@ MonoBehaviour:
   stunDuration: 5
   runningClip: {fileID: 2140326254}
   swingSound: {fileID: 8300000, guid: 1a4fdad0cf5e7ea48aece77133a00335, type: 3}
+  attackHit: {fileID: 8300000, guid: 922133263fd798841bd20f534bcc82c3, type: 3}
 --- !u!1 &846325401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4263,6 +4264,7 @@ MonoBehaviour:
   playerController: {fileID: 799452526}
   victoryTrigger: {fileID: 1383790279}
   team: Blue
+  winFanfare: {fileID: 8300000, guid: ba7f1c8ac098b5844a33cd1bdbbb661b, type: 3}
 --- !u!1 &883712278
 GameObject:
   m_ObjectHideFlags: 0
@@ -7170,6 +7172,7 @@ MonoBehaviour:
   stunDuration: 5
   runningClip: {fileID: 348715342}
   swingSound: {fileID: 8300000, guid: 31547f2fec3b3a64f83c9f1397034291, type: 3}
+  attackHit: {fileID: 8300000, guid: 70768b8dc16a44c42bc7480408599674, type: 3}
 --- !u!4 &1627425276
 Transform:
   m_ObjectHideFlags: 0
@@ -9677,6 +9680,7 @@ MonoBehaviour:
   playerController: {fileID: 1627425275}
   victoryTrigger: {fileID: 1470649550}
   team: Yellow
+  winFanfare: {fileID: 8300000, guid: ba7f1c8ac098b5844a33cd1bdbbb661b, type: 3}
 --- !u!1 &2115409971
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 //Written by Quinn
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor.U2D.Aseprite;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject runningClip;
     [SerializeField] private AudioClip swingSound;
+    [SerializeField] private AudioClip attackHit;
 
     private GameManager gameManager;
 
@@ -114,5 +116,10 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(stunDuration);
         playerInput.enabled = true;
 
+    }
+
+    public void PlayerHurt()
+    {
+        AudioSource.PlayClipAtPoint(attackHit, playerRigidbody.transform.position);
     }
 }
