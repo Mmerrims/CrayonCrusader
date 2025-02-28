@@ -16,7 +16,7 @@ public class AttackCollision : MonoBehaviour
             hitObject.GetComponent<Lever>().GetOpenClose();
         }
 
-        if (collision.CompareTag("Player") != false)
+        else if (collision.CompareTag("Player") != false)
         {
             Debug.Log("Statebhaw bi");
             hitObject = collision.gameObject;
