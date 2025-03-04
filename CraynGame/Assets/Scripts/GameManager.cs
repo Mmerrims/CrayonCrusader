@@ -43,15 +43,15 @@ public class GameManager : MonoBehaviour
                 BlueController.SetActive(false);
                 YellowController.SetActive(false);
 
-                //EndScreen.SetActive(true);
+                EndScreen.SetActive(true);
 
                 if (winningTeam == "Blue")
                 {
-                    SceneManager.LoadScene("BlueWinScreen");
+                    BlueWinscreen.SetActive(true);
                 }
                 else if (winningTeam == "Yellow")
                 {
-                    SceneManager.LoadScene("YellowWinScreen");
+                    YellowWinScreen.SetActive(true);
                 }
 
                 break;
