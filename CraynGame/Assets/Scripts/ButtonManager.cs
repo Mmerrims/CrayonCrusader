@@ -2,23 +2,21 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 
-
-
 public class ButtonManager : MonoBehaviour
 {
-    public bool isReadyRight = false;
-    public bool isReadyLeft = false;
-    //[SerializeField] private GameObject LeftButton;
-    //[SerializeField] private GameObject RightButton;
-
-    // Start is called before the first frame update
-
+    private bool isReadyRight = false;
+    private bool isReadyLeft = false;
+    [SerializeField] private float TimeToStart;
+    [SerializeField] private GameObject RightText;
+    [SerializeField] private GameObject LeftText;
+    [SerializeField] private string IsReadyText;
     
     public void ReadyUpRight()
     {
@@ -27,18 +25,13 @@ public class ButtonManager : MonoBehaviour
             Debug.Log("right button is ready");
             isReadyRight = true;
         }
-        else if (isReadyRight == true)
-        {
-            Debug.Log("right button is not ready");
-            isReadyRight = false;
 
-        }
 
          if (isReadyRight == true && isReadyLeft == true)
         {
             Debug.Log("right and left are ready");
             //Start game here
-            StartGame();
+            GameStartTimer();
         }
 
     }
@@ -50,22 +43,39 @@ public class ButtonManager : MonoBehaviour
         {
             isReadyLeft = true;
         }
-        else if (isReadyLeft == true)
-        {
-            isReadyLeft = false;
-        }
+
 
          if (isReadyRight == true && isReadyLeft == true)
         {
             //Start game here
-            StartGame();
-
+            GameStartTimer();
         }
     }
 
-    private void StartGame()
+    private void GameStartTimer()
     {
-        Debug.Log("This should load a scene");
+        //Edit the text for a 3-2-1 countdown. 
+
+        //3 second countdown for starting the game
+        StartCoroutine(Countdown());
+
+    }
+
+    private IEnumerator Countdown()
+    {
+        yield return new WaitForSeconds(TimeToStart);
         SceneManager.LoadScene("GameplayScene");
     }
+
+    public void ChangeButtonTextRight()
+    {
+        RightText.GetComponent<TMP_Text>().text = (IsReadyText);
+    }
+
+    public void ChangeButtonTextLeft()
+    {
+        LeftText.GetComponent<TMP_Text>().text = (IsReadyText);
+    }
+
+
 }
