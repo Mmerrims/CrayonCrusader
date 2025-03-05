@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackCollision : MonoBehaviour
 {
     private GameObject hitObject;
-    private PlayerController playerController;
+    [SerializeField] private PlayerController playerController;
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
