@@ -4272,6 +4272,7 @@ GameObject:
   - component: {fileID: 853172886}
   - component: {fileID: 853172885}
   - component: {fileID: 853172889}
+  - component: {fileID: 853172890}
   m_Layer: 7
   m_Name: BluePlayer2
   m_TagString: Player
@@ -4425,6 +4426,27 @@ MonoBehaviour:
   victoryTrigger: {fileID: 1383790279}
   team: Blue
   winFanfare: {fileID: 8300000, guid: ba7f1c8ac098b5844a33cd1bdbbb661b, type: 3}
+--- !u!95 &853172890
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853172884}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &883712278
 GameObject:
   m_ObjectHideFlags: 0
@@ -9842,6 +9864,7 @@ GameObject:
   - component: {fileID: 2093417368}
   - component: {fileID: 2093417367}
   - component: {fileID: 2093417371}
+  - component: {fileID: 2093417372}
   m_Layer: 7
   m_Name: YellowPlayer1
   m_TagString: Player
@@ -9995,6 +10018,27 @@ MonoBehaviour:
   victoryTrigger: {fileID: 1470649550}
   team: Yellow
   winFanfare: {fileID: 8300000, guid: ba7f1c8ac098b5844a33cd1bdbbb661b, type: 3}
+--- !u!95 &2093417372
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093417366}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2115409971
 GameObject:
   m_ObjectHideFlags: 0
