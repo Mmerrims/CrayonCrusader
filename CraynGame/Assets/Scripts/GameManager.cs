@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject YellowWinScreen;
 
     [SerializeField] private GameObject EndScreen;
+    [SerializeField] private Timer Timer1;
+    [SerializeField] private Timer Timer2;
 
 
 
@@ -44,6 +46,8 @@ public class GameManager : MonoBehaviour
                 YellowController.SetActive(false);
 
                 EndScreen.SetActive(true);
+                Timer1.StopTimer();
+                Timer2.StopTimer();
 
                 if (winningTeam == "Blue")
                 {
