@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -14,9 +15,9 @@ public class ButtonManager : MonoBehaviour
     private bool isReadyRight = false;
     private bool isReadyLeft = false;
     [SerializeField] private float TimeToStart;
-    [SerializeField] private GameObject RightText;
-    [SerializeField] private GameObject LeftText;
-    [SerializeField] private string IsReadyText;
+    [SerializeField] private GameObject RightButton;
+    [SerializeField] private GameObject LeftButton;
+    [SerializeField] private Sprite ReadySprite;
     
     public void ReadyUpRight()
     {
@@ -66,15 +67,15 @@ public class ButtonManager : MonoBehaviour
         yield return new WaitForSeconds(TimeToStart);
         SceneManager.LoadScene("GameplayScene");
     }
-
+    //These need to be fixed. I'm not completely sure why it's throwing runtime errors. 
     public void ChangeButtonTextRight()
     {
-        RightText.GetComponent<TMP_Text>().text = (IsReadyText);
+        RightButton.GetComponent<Image>().sprite = (ReadySprite);
     }
 
     public void ChangeButtonTextLeft()
     {
-        LeftText.GetComponent<TMP_Text>().text = (IsReadyText);
+        LeftButton.GetComponent<Image>().sprite = (ReadySprite);
     }
 
 
