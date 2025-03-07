@@ -13,24 +13,10 @@ public class Rotate : MonoBehaviour
     private void Awake()
     {
         rb = RotatedObject.GetComponent<Rigidbody2D>();
+        StartCoroutine(Rotate2());
     }
 
-    private void FixedUpdate()
-    {
-        if (isTurning != false)
-        {
-            StartRotation();
-        }
-
-    }
-
-    public void StartRotation()
-    {
-        //START WORKING HERE!!!!!
-        float NewXRotation = (RotatedObject.transform.rotation.x + rotateSpeed);
-        //RotatedObject.transform.rotation = NewXRotation;
-        //rb.AddTorque(rotateSpeed * Time.fixedDeltaTime);
-    }
+    
 
     public void IsTurningOnOff()
     {
@@ -43,6 +29,19 @@ public class Rotate : MonoBehaviour
         {
             isTurning = false;
         }
+    }
+
+    private IEnumerator Rotate2()
+    {
+        Vector3 startRotation = RotatedObject.transform.eulerAngles;
+        float timer = 0;
+        while (timer < rotateSpeed) 
+        {
+            timer += Time.deltaTime;
+            RotatedObject.transform.eulerAngles = Vector3.Lerp(startRotation, new Vector3(startRotation.x, startRotation.y, startRotation.z + 90), timer/rotateSpeed);
+            yield return null;
+        }
+        
     }
 
 }

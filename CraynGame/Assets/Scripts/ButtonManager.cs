@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 
 public class ButtonManager : MonoBehaviour
