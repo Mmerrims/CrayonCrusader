@@ -4507,7 +4507,7 @@ PrefabInstance:
     - target: {fileID: 7460635421473360088, guid: f3538bafbd0aaa94b97ab23fb33cdf6e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 51c62ed505464f74884329e5fbf028f0, type: 3}
+      objectReference: {fileID: 21300000, guid: 1489aeccc580a904598b5c0c91458a5c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5784,11 +5784,11 @@ PrefabInstance:
     - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: Door1Closed
       value: 
-      objectReference: {fileID: 21300000, guid: 51c62ed505464f74884329e5fbf028f0, type: 3}
+      objectReference: {fileID: 21300000, guid: 1489aeccc580a904598b5c0c91458a5c, type: 3}
     - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: Door2Closed
       value: 
-      objectReference: {fileID: 21300000, guid: 48b2eb0fe6dfd2949816565f6b629252, type: 3}
+      objectReference: {fileID: 21300000, guid: 7dc91d7e33e64a04c8b4d0c882138828, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.237349
@@ -15901,11 +15901,11 @@ PrefabInstance:
     - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: Door1Closed
       value: 
-      objectReference: {fileID: 21300000, guid: f43be31505099d54ea5970a84def54f2, type: 3}
+      objectReference: {fileID: 21300000, guid: c48507022fb417e479e5e56f2a0ab1b9, type: 3}
     - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: Door2Closed
       value: 
-      objectReference: {fileID: 21300000, guid: 48b2eb0fe6dfd2949816565f6b629252, type: 3}
+      objectReference: {fileID: 21300000, guid: 7dc91d7e33e64a04c8b4d0c882138828, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.07
@@ -16451,7 +16451,7 @@ PrefabInstance:
     - target: {fileID: 7460635421473360088, guid: f3538bafbd0aaa94b97ab23fb33cdf6e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f43be31505099d54ea5970a84def54f2, type: 3}
+      objectReference: {fileID: 21300000, guid: c48507022fb417e479e5e56f2a0ab1b9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18587,6 +18587,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3408736087923270485, guid: f3538bafbd0aaa94b97ab23fb33cdf6e, type: 3}
+      propertyPath: isOpen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5019520844814943249, guid: f3538bafbd0aaa94b97ab23fb33cdf6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.010809
@@ -18631,6 +18635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7460635421473360088, guid: f3538bafbd0aaa94b97ab23fb33cdf6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a5d2de8edc43c94ba8801eb2284b70f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
