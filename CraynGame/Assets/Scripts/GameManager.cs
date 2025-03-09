@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private string winningTeam;
     [SerializeField] private GameObject BlueWinscreen;
     [SerializeField] private GameObject YellowWinScreen;
+    [SerializeField] private GameObject YellowLoseScreen;
+    [SerializeField] private GameObject BlueLoseScreen;
 
     [SerializeField] private GameObject EndScreen;
     [SerializeField] private Timer Timer1;
@@ -56,6 +58,13 @@ public class GameManager : MonoBehaviour
                 else if (winningTeam == "Yellow")
                 {
                     YellowWinScreen.SetActive(true);
+                }
+
+                if (winningTeam != "Blue" || winningTeam != "Yellow")
+                {
+                    Debug.Log("Neither tem won");
+                    YellowLoseScreen.SetActive(true);
+                    BlueLoseScreen.SetActive(true);
                 }
 
                 break;
