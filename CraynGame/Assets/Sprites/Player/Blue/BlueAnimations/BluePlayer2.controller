@@ -1032,7 +1032,7 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsMovingB
     m_EventTreshold: 0
-  - m_ConditionMode: 2
+  - m_ConditionMode: 1
     m_ConditionEvent: IsFacingRightB
     m_EventTreshold: 0
   - m_ConditionMode: 2
@@ -2862,14 +2862,14 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsMovingB
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsFacingRightB
+    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFacingAwayB
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFacingTowardsB
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingRightB
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsHitB
@@ -3002,14 +3002,14 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsMovingB
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsFacingRightB
+    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFacingAwayB
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFacingTowardsB
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsFacingRightB
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsHitB
