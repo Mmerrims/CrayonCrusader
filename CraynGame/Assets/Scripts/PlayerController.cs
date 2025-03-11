@@ -26,12 +26,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip swingSound;
     [SerializeField] private AudioClip attackHit;
 
+    [SerializeField] private GameObject player;
+
     private GameManager gameManager;
+    private Animator animator;
 
     
     private void Awake()
     {
         gameManager = GetComponent<GameManager>();
+        animator = player.GetComponent<Animator>();
     }
 
     //This moves the player. It is invoked by Unity Events
@@ -41,6 +45,10 @@ public class PlayerController : MonoBehaviour
         //If the button was pressed
         if (context.performed != false)
         {
+            //Activates the animator. Requires forking for both anims
+
+            animator.SetBool("IsMovingY", true);
+            animator.SetBool("IsMovingB", true);
             //Movement Code. May need to be moved out of rigidbody and into transform
             Vector2 inputVector = context.ReadValue<Vector2>();
             playerRigidbody.velocity = new Vector2(inputVector.x, inputVector.y) * speed;
@@ -57,6 +65,9 @@ public class PlayerController : MonoBehaviour
         {
             playerRigidbody.velocity = new Vector2(0, 0) * speed;
             isMoving = false;
+            //Deactiviates the animation
+            animator.SetBool("IsMovingY", false);
+            animator.SetBool("IsMovingB", false);
 
         }
     }

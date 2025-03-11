@@ -21,9 +21,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Timer Timer1;
     [SerializeField] private Timer Timer2;
 
-
-
-
     private void Statemanager()
     {
         switch (gameState)
