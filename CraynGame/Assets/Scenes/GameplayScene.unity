@@ -9354,7 +9354,7 @@ MonoBehaviour:
   speed: 3
   isMoving: 0
   attackZone: {fileID: 620237054}
-  attackDuration: 3
+  attackDuration: 0.9
   stunDuration: 5
   runningClip: {fileID: 2140326254}
   swingSound: {fileID: 8300000, guid: 1a4fdad0cf5e7ea48aece77133a00335, type: 3}
@@ -9782,14 +9782,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853172884}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.75, y: 4.18, z: 0.34469292}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 620237055}
   m_Father: {fileID: 633543342}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &853172889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12737,7 +12737,7 @@ MonoBehaviour:
   speed: 3
   isMoving: 0
   attackZone: {fileID: 969292521}
-  attackDuration: 3
+  attackDuration: 0.9
   stunDuration: 5
   runningClip: {fileID: 348715342}
   swingSound: {fileID: 8300000, guid: 31547f2fec3b3a64f83c9f1397034291, type: 3}

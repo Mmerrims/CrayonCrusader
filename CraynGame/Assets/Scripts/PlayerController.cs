@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
         if (context.performed != false)
         {
             //Activates the animator. Requires forking for both anims
-
             animator.SetBool("IsMovingY", true);
             animator.SetBool("IsMovingB", true);
             //Movement Code. May need to be moved out of rigidbody and into transform
@@ -79,6 +78,11 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("Slice Occured");
             attackZone.SetActive(true);
             StartCoroutine(attack());
+
+            //Activates the attack anims
+            animator.SetBool("IsAttackingB", true);
+            animator.SetBool("IsAttackingY", true);
+
         }
     }
 
@@ -88,6 +92,9 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(attackDuration);
         //Debug.Log("Attack duration ended");
         attackZone.SetActive(false);
+        //disables the attack anims
+        animator.SetBool("IsAttackingB", false);
+        animator.SetBool("IsAttackingY", false);
     }
 
 
