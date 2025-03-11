@@ -9355,7 +9355,7 @@ MonoBehaviour:
   isMoving: 0
   attackZone: {fileID: 620237054}
   attackDuration: 0.9
-  stunDuration: 5
+  stunDuration: 3
   runningClip: {fileID: 2140326254}
   swingSound: {fileID: 8300000, guid: 1a4fdad0cf5e7ea48aece77133a00335, type: 3}
   attackHit: {fileID: 8300000, guid: 922133263fd798841bd20f534bcc82c3, type: 3}
@@ -12738,7 +12738,7 @@ MonoBehaviour:
   isMoving: 0
   attackZone: {fileID: 969292521}
   attackDuration: 0.9
-  stunDuration: 5
+  stunDuration: 3
   runningClip: {fileID: 348715342}
   swingSound: {fileID: 8300000, guid: 31547f2fec3b3a64f83c9f1397034291, type: 3}
   attackHit: {fileID: 8300000, guid: 70768b8dc16a44c42bc7480408599674, type: 3}
