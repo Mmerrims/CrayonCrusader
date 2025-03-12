@@ -9,7 +9,9 @@ class Timer: MonoBehaviour
     private bool _timerActive;
     private float _currentTime;
     [SerializeField] private TMP_Text _text;
-    [SerializeField] private int _startMinutes; 
+    [SerializeField] private int _startMinutes;
+    private GameManager _gameManager;
+    private bool _gameHasEnded;
 
     private void Start()
     {
@@ -17,14 +19,21 @@ class Timer: MonoBehaviour
         _timerActive = true;
     }
 
+    private void Awake()
+    {
+        _gameManager = FindAnyObjectByType<GameManager>();
+    }
+
     void Update()
     {
-        if ( _timerActive )
+        if ( _timerActive && _gameHasEnded != true )
         {
             _currentTime = _currentTime - Time.deltaTime;
             if( _currentTime <= 0)
             {
                 _timerActive = false;
+                _gameHasEnded = true;
+                _gameManager.SetStateEnded("Tie");
             }
 
         }
@@ -39,6 +48,7 @@ class Timer: MonoBehaviour
 
     public void StopTimer()
     {
+        Debug.Log(_currentTime);
         _timerActive = false;
     }
 
