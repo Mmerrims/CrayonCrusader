@@ -135,11 +135,14 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsHitY", true);
         Debug.Log("HitCooldown");
         playerInput.enabled = false;
+        player.GetComponent<CircleCollider2D>().enabled = false;
         yield return new WaitForSeconds(stunDuration);
         playerInput.enabled = true;
+        player.GetComponent<CircleCollider2D>().enabled = true;
         //Disables the stun anims
         animator.SetBool("IsHitB", false);
         animator.SetBool("IsHitY", false);
+
 
     }
 
