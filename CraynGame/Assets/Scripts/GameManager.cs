@@ -57,9 +57,9 @@ public class GameManager : MonoBehaviour
                     YellowWinScreen.SetActive(true);
                 }
 
-                if (winningTeam != "Blue" || winningTeam != "Yellow")
+                else if (winningTeam == "Tie")
                 {
-                    Debug.Log("Neither tem won");
+                    Debug.Log("Neither team won");
                     YellowLoseScreen.SetActive(true);
                     BlueLoseScreen.SetActive(true);
                 }
@@ -78,6 +78,8 @@ public class GameManager : MonoBehaviour
         Debug.Log(winningTeam + " has won!!");
         Statemanager();
     }
+
+
 
 
 }
