@@ -65,7 +65,7 @@ public class ButtonManager : MonoBehaviour
     private IEnumerator Countdown()
     {
         yield return new WaitForSeconds(TimeToStart);
-        SceneManager.LoadScene("GameplayScene");
+        SceneManager.LoadScene("GamePlaySceneFix");
     }
     //These need to be fixed. I'm not completely sure why it's throwing runtime errors. 
     public void ChangeButtonTextRight()
