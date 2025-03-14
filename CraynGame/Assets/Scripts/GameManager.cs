@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject EndScreen;
     [SerializeField] private Timer Timer1;
     [SerializeField] private Timer Timer2;
+    [SerializeField] private float RestartGameTimer;
 
     private void Statemanager()
     {
@@ -47,6 +48,8 @@ public class GameManager : MonoBehaviour
                 EndScreen.SetActive(true);
                 Timer1.StopTimer();
                 Timer2.StopTimer();
+
+                StartCoroutine(GoToMainMenu());
 
                 if (winningTeam == "Blue")
                 {
@@ -79,7 +82,12 @@ public class GameManager : MonoBehaviour
         Statemanager();
     }
 
-
+    private IEnumerator GoToMainMenu()
+    {
+        yield return new WaitForSeconds(RestartGameTimer);
+        SceneManager.LoadScene("TitleScene2");
+        yield return null;
+    }
 
 
 }

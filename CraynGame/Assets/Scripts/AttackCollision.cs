@@ -28,7 +28,7 @@ public class AttackCollision : MonoBehaviour
         {
             Debug.Log("Rotation button hit");
             hitObject = collision.gameObject;
-            //hitObject.GetComponent<Rotate>().IsTurningOnOff();
+            //hitObject.GetComponent<Rotate>().RotateObject();
 
         }
 

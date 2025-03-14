@@ -9,27 +9,27 @@ public class Rotate : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float rotateSpeed;
     private bool isTurning;
+    [SerializeField] private float timerLength;
 
     private void Awake()
     {
         rb = RotatedObject.GetComponent<Rigidbody2D>();
-        StartCoroutine(Rotate2());
     }
 
-    
-
-    public void IsTurningOnOff()
+    private void Start()
     {
-        if (isTurning == false)
-        {
-            isTurning = true;
-        }
-        
-        if (isTurning == true)
-        {
-            isTurning = false;
-        }
+        StartCoroutine(StartGameCountdown());
     }
+
+    private IEnumerator StartGameCountdown()
+    {
+        yield return new WaitForSeconds(timerLength);
+        StartCoroutine(Rotate2());
+        StartCoroutine(StartGameCountdown());
+        yield return null;
+    }
+
+
 
     private IEnumerator Rotate2()
     {
