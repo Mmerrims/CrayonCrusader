@@ -498,6 +498,22 @@ PrefabInstance:
       propertyPath: Door2
       value: 
       objectReference: {fileID: 222723180}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 1489aeccc580a904598b5c0c91458a5c, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 1489aeccc580a904598b5c0c91458a5c, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 51c62ed505464f74884329e5fbf028f0, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 51c62ed505464f74884329e5fbf028f0, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.647196
@@ -974,6 +990,22 @@ PrefabInstance:
       propertyPath: Door2
       value: 
       objectReference: {fileID: 271373131}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Open
+      value: 
+      objectReference: {fileID: 21300000, guid: ebe377bc149533a47bf149678a973c91, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Open
+      value: 
+      objectReference: {fileID: 21300000, guid: ebe377bc149533a47bf149678a973c91, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bd77bcf39ba2084a9772123985601b6, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 3bd77bcf39ba2084a9772123985601b6, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1771955
@@ -7199,6 +7231,22 @@ PrefabInstance:
       propertyPath: Door2
       value: 
       objectReference: {fileID: 222723180}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 1489aeccc580a904598b5c0c91458a5c, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 1489aeccc580a904598b5c0c91458a5c, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 51c62ed505464f74884329e5fbf028f0, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 51c62ed505464f74884329e5fbf028f0, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.542805
@@ -8783,6 +8831,22 @@ PrefabInstance:
       propertyPath: Door2
       value: 
       objectReference: {fileID: 793808780}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 7dc91d7e33e64a04c8b4d0c882138828, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 7dc91d7e33e64a04c8b4d0c882138828, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 48b2eb0fe6dfd2949816565f6b629252, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 48b2eb0fe6dfd2949816565f6b629252, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5328045
@@ -16023,6 +16087,22 @@ PrefabInstance:
       propertyPath: Door2
       value: 
       objectReference: {fileID: 899858352}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Open
+      value: 
+      objectReference: {fileID: 21300000, guid: c48507022fb417e479e5e56f2a0ab1b9, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Open
+      value: 
+      objectReference: {fileID: 21300000, guid: c48507022fb417e479e5e56f2a0ab1b9, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: f43be31505099d54ea5970a84def54f2, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: f43be31505099d54ea5970a84def54f2, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5228043
@@ -16791,6 +16871,22 @@ PrefabInstance:
       propertyPath: Door2
       value: 
       objectReference: {fileID: 793808780}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 7dc91d7e33e64a04c8b4d0c882138828, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Open
+      value: 
+      objectReference: {fileID: 21300000, guid: 7dc91d7e33e64a04c8b4d0c882138828, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 48b2eb0fe6dfd2949816565f6b629252, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: 48b2eb0fe6dfd2949816565f6b629252, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.4771957
@@ -17741,6 +17837,22 @@ PrefabInstance:
       propertyPath: Door2
       value: 
       objectReference: {fileID: 899858352}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Open
+      value: 
+      objectReference: {fileID: 21300000, guid: c48507022fb417e479e5e56f2a0ab1b9, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Open
+      value: 
+      objectReference: {fileID: 21300000, guid: c48507022fb417e479e5e56f2a0ab1b9, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door1Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: f43be31505099d54ea5970a84def54f2, type: 3}
+    - target: {fileID: 1299563987018902218, guid: e00c973e5d134d2408b9088939baff13, type: 3}
+      propertyPath: Door2Closed
+      value: 
+      objectReference: {fileID: 21300000, guid: f43be31505099d54ea5970a84def54f2, type: 3}
     - target: {fileID: 1715544669562006551, guid: e00c973e5d134d2408b9088939baff13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5028043
