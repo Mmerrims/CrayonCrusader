@@ -70,6 +70,15 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+    // If()
+    //{
+    //animator.SetBool("isFacingRightY", );
+    //animator.SetBool("isFacingRightB", );
+    //animator.SetBool("isFacingAwayY", );
+    //animator.SetBool("isFacingAwayB", );
+    //animator.SetBool("isFacingTowardsY", );
+    //animator.SetBool("isFacingTowardsB", );
+    //}
     public void Slice(InputAction.CallbackContext context)
     {
         //AudioSource.PlayClipAtPoint(swingSound, playerRigidbody.transform.position);
