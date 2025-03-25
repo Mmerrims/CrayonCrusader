@@ -57,15 +57,30 @@ public class PlayerController : MonoBehaviour
             print(inputVector);
             //Moves the attack zone
             attackZone.transform.position = new Vector3(playerRigidbody.transform.position.x + ((1.25f * inputVector.x) / 2), playerRigidbody.transform.position.y + ((1.25f * inputVector.y) / 2), 0f);
+            if(team == "Blue")
+            { 
+            if(inputVector.y < 0f)
+                {
+                    spriteRenderer.flipX = false;
+                }
+            else if (inputVector.y > 0f)
+                {
+                    spriteRenderer.flipX = true;
+                }
 
-            if(inputVector.x > 0f)
-            {
-                spriteRenderer.flipX = true;
             }
-            else if (inputVector.x < 0f)
+            else if(team == "Yellow")
             {
-                spriteRenderer.flipX = false;
+                if (inputVector.y > 0f)
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else if (inputVector.y < 0f)
+                {
+                    spriteRenderer.flipX = true;
+                }
             }
+
 
         }
 
