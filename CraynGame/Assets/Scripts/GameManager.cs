@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
         {
             case "NotStarted":
                 Debug.Log("Game is not started");
+                //Start the 3 second countdown
+                StartCoroutine(Startcountdown());
+                
                 break;
 
             case "Running":
@@ -87,6 +90,29 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(RestartGameTimer);
         SceneManager.LoadScene("TitleScene2");
         yield return null;
+    }
+
+    private void Awake()
+    {
+        gameState = ("NotStarted");
+        Statemanager();
+    }
+
+    private IEnumerator Startcountdown()
+    {
+        //This is a 5 second countdown
+        float secondsRemaining = 2f;
+        
+        while(secondsRemaining >= 0)
+        {
+            yield return new WaitForSeconds(secondsRemaining);
+            secondsRemaining--;
+            
+        }
+        //Start the Game
+        gameState = ("Running");
+        Statemanager ();
+        //Debug.Log(secondsRemaining);
     }
 
 
