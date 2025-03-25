@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip attackHit;
 
     [SerializeField] private GameObject player;
+    private SpriteRenderer spriteRenderer;
 
     private GameManager gameManager;
     private Animator animator;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         animator = player.GetComponent<Animator>();
+        spriteRenderer = player.GetComponent<SpriteRenderer>();
     }
 
     //This moves the player. It is invoked by Unity Events
@@ -52,10 +54,18 @@ public class PlayerController : MonoBehaviour
             Vector2 inputVector = context.ReadValue<Vector2>();
             playerRigidbody.velocity = new Vector2(inputVector.x, inputVector.y) * speed;
             isMoving = true;
-
+            print(inputVector);
             //Moves the attack zone
             attackZone.transform.position = new Vector3(playerRigidbody.transform.position.x + ((1.25f * inputVector.x) / 2), playerRigidbody.transform.position.y + ((1.25f * inputVector.y) / 2), 0f);
 
+            if(inputVector.x > 0f)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (inputVector.x < 0f)
+            {
+                spriteRenderer.flipX = false;
+            }
 
         }
 
