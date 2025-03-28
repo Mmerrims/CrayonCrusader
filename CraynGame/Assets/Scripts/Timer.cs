@@ -6,7 +6,7 @@ using System;
 
 class Timer: MonoBehaviour
 {
-    private bool _timerActive;
+    public bool _timerActive;
     private float _currentTime;
     [SerializeField] private TMP_Text _text;
     [SerializeField] private int _startMinutes;
@@ -16,7 +16,7 @@ class Timer: MonoBehaviour
     private void Start()
     {
         _currentTime = _startMinutes * 60;
-        _timerActive = true;
+        //_timerActive = true;
     }
 
     private void Awake()
