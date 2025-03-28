@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 227410606}
   - component: {fileID: 227410604}
+  - component: {fileID: 227410607}
   m_Layer: 0
   m_Name: LeftButtonManager
   m_TagString: Untagged
@@ -312,6 +313,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &227410607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227410603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2c165da5927064f851338964acc329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 2017595379}
+  Sound: {fileID: 8300000, guid: 7c6ba4e8983ff4249aece933a1f0c752, type: 3}
 --- !u!1 &331753131
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331753134}
   - component: {fileID: 331753132}
+  - component: {fileID: 331753135}
   m_Layer: 0
   m_Name: RightButtonManager
   m_TagString: Untagged
@@ -422,6 +438,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331753135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331753131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2c165da5927064f851338964acc329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Button: {fileID: 981848526}
+  Sound: {fileID: 8300000, guid: 7c6ba4e8983ff4249aece933a1f0c752, type: 3}
 --- !u!1 &573469709
 GameObject:
   m_ObjectHideFlags: 0
