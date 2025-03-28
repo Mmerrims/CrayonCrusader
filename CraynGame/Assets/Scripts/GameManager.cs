@@ -1,6 +1,7 @@
 //Written by Quinn
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,12 +23,20 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Timer Timer2;
     [SerializeField] private float RestartGameTimer;
 
+    public int CountDownTime;
+    [SerializeField] private TMP_Text BlueCountdownTimerText;
+    [SerializeField] private TMP_Text YellowCountdownTimerText;
+
+
     private void Statemanager()
     {
         switch (gameState)
         {
             case "NotStarted":
                 Debug.Log("Game is not started");
+                playersCanMove = false;
+                BlueController.SetActive(false);
+                YellowController.SetActive(false);
                 //Start the 3 second countdown
                 StartCoroutine(Startcountdown());
                 
@@ -35,8 +44,15 @@ public class GameManager : MonoBehaviour
 
             case "Running":
                 Debug.Log("Game has started running");
-                playersCanMove = true;
+                
+                //Starts the ingame timer
+                Timer1.gameObject.SetActive(true);
+                Timer2.gameObject.SetActive(true);
+                Timer1._timerActive = true;
+                Timer2._timerActive = true;
+                
 
+                playersCanMove = true;
                 BlueController.SetActive(true);
                 YellowController.SetActive(true);
                 break;
@@ -100,18 +116,28 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Startcountdown()
     {
-        //This is a 5 second countdown
-        float secondsRemaining = 2f;
-        
-        while(secondsRemaining >= 0)
+        while( CountDownTime > 0)
         {
-            yield return new WaitForSeconds(secondsRemaining);
-            secondsRemaining--;
-            
+            BlueCountdownTimerText.text = CountDownTime.ToString();
+            YellowCountdownTimerText.text = CountDownTime.ToString();
+
+            yield return new WaitForSeconds(1f);
+
+            CountDownTime--;
+
+
         }
-        //Start the Game
+
+
+        BlueCountdownTimerText.text = ("GO!");
+        YellowCountdownTimerText.text = ("GO!");
+
+        yield return new WaitForSeconds(1f);
+
+        YellowCountdownTimerText.gameObject.SetActive(false);
+        BlueCountdownTimerText.gameObject.SetActive(false);
         gameState = ("Running");
-        Statemanager ();
+        Statemanager();
         //Debug.Log(secondsRemaining);
     }
 
