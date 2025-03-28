@@ -60,6 +60,9 @@ public class PlayerController : MonoBehaviour
             playerRigidbody.velocity = new Vector2(inputVector.x, inputVector.y) * speed;
             isMoving = true;
             print(inputVector);
+            //Lets the player move again
+            playerRigidbody.constraints = RigidbodyConstraints2D.None;
+            playerRigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
             //Moves the attack zone
             attackZone.transform.position = new Vector3(playerRigidbody.transform.position.x + ((1.25f * inputVector.x) / 2), playerRigidbody.transform.position.y + ((1.25f * inputVector.y) / 2), 0f);
             if(team == "Blue")
@@ -97,6 +100,8 @@ public class PlayerController : MonoBehaviour
             //Deactiviates the animation
             animator.SetBool("IsMovingY", false);
             animator.SetBool("IsMovingB", false);
+            //Stops the player from drifting when being hit
+            playerRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
 
         }
     }
