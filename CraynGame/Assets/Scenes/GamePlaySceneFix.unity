@@ -10690,6 +10690,7 @@ MonoBehaviour:
   swingSound: {fileID: 8300000, guid: 1a4fdad0cf5e7ea48aece77133a00335, type: 3}
   attackHit: {fileID: 8300000, guid: 922133263fd798841bd20f534bcc82c3, type: 3}
   player: {fileID: 853172884}
+  Iframes: 1
 --- !u!1 &800109189
 GameObject:
   m_ObjectHideFlags: 0
@@ -11137,6 +11138,7 @@ MonoBehaviour:
   victoryTrigger: {fileID: 1383790279}
   team: Blue
   winFanfare: {fileID: 8300000, guid: ba7f1c8ac098b5844a33cd1bdbbb661b, type: 3}
+  canGetHit: 0
 --- !u!95 &853172890
 Animator:
   serializedVersion: 5
@@ -17415,6 +17417,7 @@ MonoBehaviour:
   swingSound: {fileID: 8300000, guid: 31547f2fec3b3a64f83c9f1397034291, type: 3}
   attackHit: {fileID: 8300000, guid: 70768b8dc16a44c42bc7480408599674, type: 3}
   player: {fileID: 2093417366}
+  Iframes: 1
 --- !u!4 &1627425276
 Transform:
   m_ObjectHideFlags: 0
@@ -20954,6 +20957,7 @@ MonoBehaviour:
   victoryTrigger: {fileID: 1470649550}
   team: Yellow
   winFanfare: {fileID: 8300000, guid: ba7f1c8ac098b5844a33cd1bdbbb661b, type: 3}
+  canGetHit: 0
 --- !u!95 &2093417372
 Animator:
   serializedVersion: 5

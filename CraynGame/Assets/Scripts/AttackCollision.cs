@@ -17,7 +17,7 @@ public class AttackCollision : MonoBehaviour
             hitObject.GetComponent<Lever>().GetOpenClose();
         }
 
-        else if (collision.CompareTag("Player") != false)
+        else if (collision.CompareTag("Player") && collision.GetComponent<PlayerCollision>().canGetHit != false)
         {
             //Debug.Log("Attack hit a player");
             hitObject = collision.gameObject;

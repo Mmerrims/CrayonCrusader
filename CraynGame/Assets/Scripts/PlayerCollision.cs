@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -10,10 +11,11 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] private GameObject victoryTrigger;
     [SerializeField] private string team;
     [SerializeField] private AudioClip winFanfare;
-    private Stopwatch timer = new Stopwatch();
+    public bool canGetHit;
     private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
+        canGetHit = true;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,7 +23,8 @@ public class PlayerCollision : MonoBehaviour
         {
             //Debug.Log(team + "has won the race!");
             AudioSource.PlayClipAtPoint(winFanfare, victoryTrigger.transform.position);
-            timer.Start();
+
+            gameManager.SetStateEnded(team);
         }
     }
 
@@ -30,11 +33,5 @@ public class PlayerCollision : MonoBehaviour
         playerController.GetIsHit();
     }
 
-    void Update()
-    {
-        if(timer.ElapsedMilliseconds > 2250)
-        {
-            gameManager.SetStateEnded(team);
-        }
-    }
+
 }

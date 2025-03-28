@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     private bool canAttack;
+    
+    public float Iframes;
 
     
     private void Awake()
@@ -174,6 +176,8 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsHitB", true);
         animator.SetBool("IsHitY", true);
         Debug.Log("HitCooldown");
+        player.GetComponent<PlayerCollision>().canGetHit = false;
+      
         playerInput.enabled = false;
         player.GetComponent<CircleCollider2D>().enabled = false;
         yield return new WaitForSeconds(stunDuration);
@@ -182,6 +186,7 @@ public class PlayerController : MonoBehaviour
         //Disables the stun anims
         animator.SetBool("IsHitB", false);
         animator.SetBool("IsHitY", false);
+        StartCoroutine(IFrames());
 
 
     }
@@ -189,5 +194,11 @@ public class PlayerController : MonoBehaviour
     public void PlayerHurt()
     {
         AudioSource.PlayClipAtPoint(attackHit, playerRigidbody.transform.position);
+    }
+
+    private IEnumerator IFrames()
+    {
+        yield return new WaitForSeconds(Iframes);
+        player.GetComponent<PlayerCollision>().canGetHit = true;
     }
 }
