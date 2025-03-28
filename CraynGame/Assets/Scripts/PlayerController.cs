@@ -32,12 +32,15 @@ public class PlayerController : MonoBehaviour
     private GameManager gameManager;
     private Animator animator;
 
+    private bool canAttack;
+
     
     private void Awake()
     {
         gameManager = GetComponent<GameManager>();
         animator = player.GetComponent<Animator>();
         spriteRenderer = player.GetComponent<SpriteRenderer>();
+        canAttack = true;
     }
 
     //This moves the player. It is invoked by Unity Events
@@ -106,9 +109,10 @@ public class PlayerController : MonoBehaviour
     //}
     public void Slice(InputAction.CallbackContext context)
     {
-        AudioSource.PlayClipAtPoint(swingSound, playerRigidbody.transform.position);
-        if (context.performed != true) 
+        
+        if (context.performed && canAttack != false) 
         {
+            AudioSource.PlayClipAtPoint(swingSound, playerRigidbody.transform.position);
             //Debug.Log("Slice Occured");
             attackZone.SetActive(true);
             StartCoroutine(attack());
@@ -122,6 +126,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator attack()
     {
+        canAttack = false;
        // Debug.Log("CoROutine started");
         yield return new WaitForSeconds(attackDuration);
         //Debug.Log("Attack duration ended");
@@ -129,6 +134,7 @@ public class PlayerController : MonoBehaviour
         //disables the attack anims
         animator.SetBool("IsAttackingB", false);
         animator.SetBool("IsAttackingY", false);
+        canAttack = true;
     }
 
 
