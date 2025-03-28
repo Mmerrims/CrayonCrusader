@@ -39,7 +39,7 @@ class Timer: MonoBehaviour
         }
         
         TimeSpan time = TimeSpan.FromSeconds(_currentTime);
-        _text.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        _text.text = time.Seconds.ToString();
     }
     public void StartTimer()
     {
