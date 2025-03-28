@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
     //}
     public void Slice(InputAction.CallbackContext context)
     {
-        //AudioSource.PlayClipAtPoint(swingSound, playerRigidbody.transform.position);
+        AudioSource.PlayClipAtPoint(swingSound, playerRigidbody.transform.position);
         if (context.performed != true) 
         {
             //Debug.Log("Slice Occured");
