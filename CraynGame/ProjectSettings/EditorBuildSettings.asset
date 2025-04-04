@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlaySceneFix.unity
     guid: e711649f98b360f428aea10a39d42312
+  - enabled: 1
+    path: Assets/Scenes/QuinnLevelDesignTest.unity
+    guid: 0c6cb02feac27894da989c1f756b7136
   m_configObjects: {}
