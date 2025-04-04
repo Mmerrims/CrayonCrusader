@@ -12,6 +12,8 @@ public class Lever : MonoBehaviour
     [SerializeField] private Sprite Door1Closed;
     [SerializeField] private Sprite Door2Open;
     [SerializeField] private Sprite Door2Closed;
+    private GameObject Partcles1;
+    private GameObject Partcles2;
 
     //IMPORTANT. This goes on each lever. There should be two levers and three doors linked up. Door 2 should be same
     //in both. Door 1 should be different in both. 
@@ -33,6 +35,8 @@ public class Lever : MonoBehaviour
             Door1.GetComponent<Door>().isOpen = true;
             Door1.GetComponent<BoxCollider2D>().enabled = false;
             Door1.GetComponent<SpriteRenderer>().sprite = Door1Open;
+            StartCoroutine(Door1Particles());
+
         }
         else if (Door1.GetComponent<Door>().isOpen == true)
         {
@@ -41,6 +45,7 @@ public class Lever : MonoBehaviour
             Door1.GetComponent<Door>().isOpen = false;
             Door1.GetComponent<BoxCollider2D>().enabled = true;
             Door1.GetComponent<SpriteRenderer>().sprite = Door1Closed;
+            StartCoroutine(Door1Particles());
         }
 
         //Door2 checker
@@ -51,6 +56,7 @@ public class Lever : MonoBehaviour
             Door2.GetComponent<Door>().isOpen = true;
             Door2.GetComponent<BoxCollider2D>().enabled = false;
             Door2.GetComponent<SpriteRenderer>().sprite = Door2Open;
+            StartCoroutine(Door2Particles());
         }
         else if (Door1.GetComponent<Door>().isOpen == true)
         {
@@ -59,29 +65,27 @@ public class Lever : MonoBehaviour
             Door2.GetComponent<Door>().isOpen = false;
             Door2.GetComponent<BoxCollider2D>().enabled = true;
             Door2.GetComponent<SpriteRenderer>().sprite = Door2Closed;
-
-
-
-
-            /*Debug.Log("OpenClose");
-            if (door1.activeInHierarchy != true)
-            {
-                Debug.Log("Door opened");
-                door1.SetActive(true);
-                door2.SetActive(false);
-                AudioSource.PlayClipAtPoint(doorOpen, door1.transform.position);
-            }
-            else if (door2.activeInHierarchy != true)
-            {
-                Debug.Log("Door CLosed");
-                door1.SetActive(false);
-                door2.SetActive(true);
-                AudioSource.PlayClipAtPoint(doorOpen, door2.transform.position);
-            }
-            else
-            {
-                Debug.Log("SOmething whent wrong");
-            }*/
+            StartCoroutine(Door1Particles());
         }
+    }
+
+    private void Awake()
+    {
+        Partcles1 = Door1.transform.GetChild(0).gameObject;
+        Partcles2 = Door2.transform.GetChild(0).gameObject;
+    }
+
+    private IEnumerator Door1Particles()
+    {
+        Partcles1.SetActive(true);
+        yield return new WaitForSeconds(1);
+        Partcles1.SetActive(false);
+    }
+
+    private IEnumerator Door2Particles()
+    {
+        Partcles2.SetActive(true);
+        yield return new WaitForSeconds(1);
+        Partcles2.SetActive(false);
     }
 }
