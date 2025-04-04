@@ -184,10 +184,10 @@ public class PlayerController : MonoBehaviour
         player.GetComponent<PlayerCollision>().canGetHit = false;
       
         playerInput.enabled = false;
-        player.GetComponent<CircleCollider2D>().enabled = false;
+        player.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(stunDuration);
         playerInput.enabled = true;
-        player.GetComponent<CircleCollider2D>().enabled = true;
+        player.GetComponent<BoxCollider2D>().enabled = true;
         //Disables the stun anims
         animator.SetBool("IsHitB", false);
         animator.SetBool("IsHitY", false);
