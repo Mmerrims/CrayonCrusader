@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private string gameState;
@@ -141,5 +142,8 @@ public class GameManager : MonoBehaviour
         //Debug.Log(secondsRemaining);
     }
 
-
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
 }
