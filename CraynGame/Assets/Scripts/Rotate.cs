@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Rotate : MonoBehaviour
@@ -10,6 +11,9 @@ public class Rotate : MonoBehaviour
     [SerializeField] private float rotateSpeed;
     private bool isTurning;
     [SerializeField] private float timerLength;
+    [SerializeField] private Sprite Normal;
+    [SerializeField] private Sprite Flash;
+    [SerializeField] private SpriteRenderer spriterender;
 
     private void Awake()
     {
@@ -25,6 +29,7 @@ public class Rotate : MonoBehaviour
     {
         yield return new WaitForSeconds(timerLength);
         StartCoroutine(Rotate2());
+        StartCoroutine(RotateFlash());
         StartCoroutine(StartGameCountdown());
         yield return null;
     }
@@ -43,7 +48,16 @@ public class Rotate : MonoBehaviour
         }
         
     }
-
+    private IEnumerator RotateFlash()
+    {
+        for (int i = 0;  i < 4; i++)
+        {
+            spriterender.sprite = Flash;
+            yield return new WaitForSeconds(.125f);
+            spriterender.sprite = Normal;
+            yield return new WaitForSeconds(.125f);
+        }
+    }
 }
 
 
