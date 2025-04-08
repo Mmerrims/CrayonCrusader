@@ -45,7 +45,7 @@ public class Lever : MonoBehaviour
             Door1.GetComponent<Door>().isOpen = false;
             Door1.GetComponent<BoxCollider2D>().enabled = true;
             Door1.GetComponent<SpriteRenderer>().sprite = Door1Closed;
-            StartCoroutine(Door1Particles());
+            
         }
 
         //Door2 checker
@@ -65,7 +65,7 @@ public class Lever : MonoBehaviour
             Door2.GetComponent<Door>().isOpen = false;
             Door2.GetComponent<BoxCollider2D>().enabled = true;
             Door2.GetComponent<SpriteRenderer>().sprite = Door2Closed;
-            StartCoroutine(Door1Particles());
+            //StartCoroutine(Door1Particles());
         }
     }
 
