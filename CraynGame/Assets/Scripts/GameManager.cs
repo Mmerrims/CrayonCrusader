@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject YellowWinScreen;
     [SerializeField] private GameObject YellowLoseScreen;
     [SerializeField] private GameObject BlueLoseScreen;
+    [SerializeField] private GameObject TieScreen;
 
     [SerializeField] private GameObject EndScreen;
     [SerializeField] private Timer Timer1;
@@ -83,8 +84,8 @@ public class GameManager : MonoBehaviour
                 else if (winningTeam == "Tie")
                 {
                     Debug.Log("Neither team won");
-                    YellowLoseScreen.SetActive(true);
-                    BlueLoseScreen.SetActive(true);
+                    TieScreen.SetActive(true);
+
                 }
 
                 break;
