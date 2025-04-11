@@ -68,6 +68,9 @@ public class GameManager : MonoBehaviour
                 EndScreen.SetActive(true);
                 Timer1.StopTimer();
                 Timer2.StopTimer();
+                Timer1.gameObject.SetActive(false);
+                Timer2.gameObject.SetActive(false);
+                
 
                 StartCoroutine(GoToMainMenu());
 
