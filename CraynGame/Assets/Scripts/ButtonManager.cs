@@ -78,5 +78,8 @@ public class ButtonManager : MonoBehaviour
         LeftButton.GetComponent<Image>().sprite = (ReadySprite);
     }
 
-
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
 }
