@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("QuinnLevelDesignTest"); 
+        SceneManager.LoadScene("QuinnLevelDesignTest2"); 
     }
 
     public void Quit()
