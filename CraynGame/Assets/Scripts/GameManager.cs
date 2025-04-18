@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text BlueCountdownTimerText;
     [SerializeField] private TMP_Text YellowCountdownTimerText;
 
+    [SerializeField] private GameObject BlueWinParticles;
+    [SerializeField] private GameObject YellowWinParticles;
+
 
     private void Statemanager()
     {
@@ -78,10 +81,12 @@ public class GameManager : MonoBehaviour
                 if (winningTeam == "Blue")
                 {
                     BlueWinscreen.SetActive(true);
+                    BlueWinParticles.SetActive(true);
                 }
                 else if (winningTeam == "Yellow")
                 {
                     YellowWinScreen.SetActive(true);
+                    YellowWinParticles.SetActive(true);
                 }
 
                 else if (winningTeam == "Tie")
