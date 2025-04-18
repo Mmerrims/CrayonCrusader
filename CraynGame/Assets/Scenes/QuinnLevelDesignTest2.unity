@@ -1431,6 +1431,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1299393396}
     m_Modifications:
+    - target: {fileID: 255761797171940566, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226657447658509305, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.036456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226657447658509305, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4823
+      objectReference: {fileID: 0}
     - target: {fileID: 2463470019939596915, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2925894
@@ -1487,9 +1499,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotatingBlock#2
       objectReference: {fileID: 0}
+    - target: {fileID: 4908402880105592975, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5341431645680677592, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
       propertyPath: m_Size.y
       value: 0.31535554
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341431645680677592, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5341431645680677592, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
       propertyPath: m_Offset.y
@@ -1498,6 +1518,10 @@ PrefabInstance:
     - target: {fileID: 6127004852316222769, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
       propertyPath: m_Size.y
       value: 0.33385962
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127004852316222769, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6127004852316222769, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
       propertyPath: m_Offset.y
@@ -19422,6 +19446,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1299393396}
     m_Modifications:
+    - target: {fileID: 255761797171940566, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2463470019939596915, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.3052745
@@ -19473,6 +19501,34 @@ PrefabInstance:
     - target: {fileID: 3049192714539489480, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
       propertyPath: m_Name
       value: RotatingBlock#2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908402880105592975, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341431645680677592, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2143471
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341431645680677592, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341431645680677592, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.39282644
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127004852316222769, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Size.y
+      value: 0.17737532
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127004852316222769, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127004852316222769, guid: 5fbcecbc227bbd743adcd7049f731a96, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.41131234
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
