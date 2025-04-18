@@ -65,7 +65,7 @@ public class ButtonManager : MonoBehaviour
     private IEnumerator Countdown()
     {
         yield return new WaitForSeconds(TimeToStart);
-        SceneManager.LoadScene("QuinnLevelDesignTest");
+        SceneManager.LoadScene("QuinnLevelDesignTest2");
     }
     //These need to be fixed. I'm not completely sure why it's throwing runtime errors. 
     public void ChangeButtonTextRight()
@@ -78,5 +78,8 @@ public class ButtonManager : MonoBehaviour
         LeftButton.GetComponent<Image>().sprite = (ReadySprite);
     }
 
-
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
 }
