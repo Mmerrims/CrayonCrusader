@@ -1472,7 +1472,7 @@ MonoBehaviour:
   TimeToStart: 3
   RightButton: {fileID: 981848526}
   LeftButton: {fileID: 2017595379}
-  ReadySprite: {fileID: 81604414, guid: 8a2214cf3a227f24f980c363d299b046, type: 3}
+  ReadySprite: {fileID: 1228988403, guid: 8a2214cf3a227f24f980c363d299b046, type: 3}
 --- !u!1 &1840813588
 GameObject:
   m_ObjectHideFlags: 0
