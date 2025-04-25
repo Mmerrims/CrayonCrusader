@@ -70,12 +70,15 @@ public class ButtonManager : MonoBehaviour
     //These need to be fixed. I'm not completely sure why it's throwing runtime errors. 
     public void ChangeButtonTextRight()
     {
-        RightButton.GetComponent<Image>().sprite = (ReadySprite);
+        //RightButton.GetComponent<Image>().sprite = (ReadySprite);
+        RightButton.GetComponent<Animator>().SetBool("ButtonPressedRight", true);
     }
 
     public void ChangeButtonTextLeft()
     {
-        LeftButton.GetComponent<Image>().sprite = (ReadySprite);
+        //LeftButton.GetComponent<Image>().sprite = (ReadySprite);
+        LeftButton.GetComponent<Animator>().SetBool("ButtonPressedLeft", true);
+
     }
 
     private void Start()
