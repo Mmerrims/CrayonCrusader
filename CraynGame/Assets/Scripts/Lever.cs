@@ -14,13 +14,21 @@ public class Lever : MonoBehaviour
     [SerializeField] private Sprite Door2Closed;
     private GameObject Partcles1;
     private GameObject Partcles2;
+    public bool canOpenClose = true;
 
     //IMPORTANT. This goes on each lever. There should be two levers and three doors linked up. Door 2 should be same
     //in both. Door 1 should be different in both. 
 
     public void GetOpenClose()
     {
-        OpenClose();
+        Debug.Log(canOpenClose);
+        if (canOpenClose == true)
+        {
+            OpenClose();
+            canOpenClose = false;
+            //StartCoroutine(ButtonCountdown());
+        }
+        
     }
 
     private void OpenClose()
@@ -87,5 +95,14 @@ public class Lever : MonoBehaviour
         Partcles2.SetActive(true);
         yield return new WaitForSeconds(1);
         Partcles2.SetActive(false);
+    }
+
+    private IEnumerator ButtonCountdown()
+    {
+        
+        yield return new WaitForSeconds(1f);
+        canOpenClose = true;
+
+        Debug.Log(canOpenClose);
     }
 }

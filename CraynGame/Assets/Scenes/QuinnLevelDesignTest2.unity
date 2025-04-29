@@ -10372,6 +10372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d756685ad5ddc0c4595cb10650c02676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitObject: {fileID: 0}
   playerController: {fileID: 799452526}
 --- !u!1 &633543341
 GameObject:
@@ -12510,6 +12511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d756685ad5ddc0c4595cb10650c02676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitObject: {fileID: 0}
   playerController: {fileID: 1627425275}
 --- !u!1001 &975165623
 PrefabInstance:
@@ -16670,6 +16672,8 @@ MonoBehaviour:
   YellowCountdownTimerText: {fileID: 1415633752}
   BlueWinParticles: {fileID: 639473131}
   YellowWinParticles: {fileID: 253673649}
+  P1Audio: {fileID: 2115409971}
+  P2Audio: {fileID: 1880612042}
 --- !u!1 &1190953117
 GameObject:
   m_ObjectHideFlags: 0
@@ -17923,7 +17927,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.04638827}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17934,7 +17938,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.5462735}
   m_EdgeRadius: 0
 --- !u!1 &1415633749
 GameObject:
@@ -18536,7 +18540,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.056879044}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18547,7 +18551,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.3271837}
   m_EdgeRadius: 0
 --- !u!1 &1477856228
 GameObject:
@@ -20301,6 +20305,7 @@ MonoBehaviour:
   Door1Closed: {fileID: 0}
   Door2Open: {fileID: 0}
   Door2Closed: {fileID: 0}
+  canOpenClose: 1
 --- !u!1 &1748757262
 GameObject:
   m_ObjectHideFlags: 0

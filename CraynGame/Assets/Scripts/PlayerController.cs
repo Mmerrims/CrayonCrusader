@@ -142,6 +142,8 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsAttackingB", false);
         animator.SetBool("IsAttackingY", false);
         canAttack = true;
+        attackZone.GetComponent<AttackCollision>().hitObject.GetComponent<Lever>().canOpenClose = true;
+        
     }
 
 

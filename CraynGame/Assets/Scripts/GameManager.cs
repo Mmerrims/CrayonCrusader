@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject BlueWinParticles;
     [SerializeField] private GameObject YellowWinParticles;
+    [SerializeField] private GameObject P1Audio;
+    [SerializeField] private GameObject P2Audio;
 
 
     private void Statemanager()
@@ -69,11 +71,14 @@ public class GameManager : MonoBehaviour
                 BlueController.SetActive(false);
                 YellowController.SetActive(false);
 
+
                 EndScreen.SetActive(true);
                 Timer1.StopTimer();
                 Timer2.StopTimer();
                 Timer1.gameObject.SetActive(false);
                 Timer2.gameObject.SetActive(false);
+                P1Audio.SetActive(false);
+                P2Audio.SetActive(false);
                 
 
                 StartCoroutine(GoToMainMenu());

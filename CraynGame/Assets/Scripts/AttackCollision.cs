@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AttackCollision : MonoBehaviour
 {
-    private GameObject hitObject;
+    public GameObject hitObject;
     [SerializeField] private PlayerController playerController;
+    private bool canHitButton = true;
+    private float buttonCooldown = 1f;
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,6 +15,7 @@ public class AttackCollision : MonoBehaviour
         {
             //Debug.Log("Lever has been hit");
             hitObject = collision.gameObject;
+            Debug.Log(canHitButton);
 
             hitObject.GetComponent<Lever>().GetOpenClose();
         }
@@ -33,5 +36,8 @@ public class AttackCollision : MonoBehaviour
         }
 
     }
-    
+
+
+
+
 }
